@@ -13,7 +13,6 @@ script:
 - ng e2e
 - ng build --prod
 deploy:
-  provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: dist/uat-automatyzacja-202012
