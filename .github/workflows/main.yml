@@ -25,10 +25,10 @@ jobs:
         with:
           node-version: '10.x'
 
+      # Install dependencies
+      - name: Install Dependencies
+        run: npm install
+        
       # Runs linter
       - name: Run Linter
         run: npm run lint
-        
-      # Install dependenciecs
-        - name: Install Dependencies
-          run : npm Install
