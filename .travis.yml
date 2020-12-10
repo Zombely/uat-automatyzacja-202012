@@ -16,8 +16,8 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: dist/pesel
+  local_dir: dist/uat-automatyzacja-202012
   provider: firebase
   token: $FIREBASE_TOKEN
   on:
-    branch: master
+    branch: main
