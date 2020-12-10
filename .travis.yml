@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - "10"
+dist: trusty
+sudo: required
+addons:
+  chrome: stable
+before_script:
+  - npm install -g @angular/cli
+script:
+- ng lint
+- ng test --watch=false --browsers=ChromeHeadless
+- ng e2e
+- ng build --prod
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/pesel
+  provider: firebase
+  token: $FIREBASE_TOKEN
+  on:
+    branch: master
